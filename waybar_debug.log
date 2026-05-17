@@ -1,0 +1,4 @@
+[2026-05-17 22:22:59.576] [info] Using configuration file /home/bergo/.config/waybar/config.jsonc
+[2026-05-17 22:22:59.579] [info] Discovered appearance 'dark'
+[2026-05-17 22:22:59.605] [info] Using CSS file /home/bergo/.config/waybar/style.css
+[2026-05-17 22:22:59.771] [info] Bar configured (width: 3040, height: 46) for output: DP-2

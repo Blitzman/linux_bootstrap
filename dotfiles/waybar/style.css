@@ -1,5 +1,5 @@
 * {
-    font-family: "FontAwesome", "Roboto", "Helvetica", "Arial", sans-serif;
+    font-family: "Symbols Nerd Font", "FontAwesome", "Roboto", "Helvetica", "Arial", sans-serif;
     font-size: 20px;
 }
 
@@ -44,7 +44,11 @@ window#waybar {
 #memory { color: #ebcb8b; }
 #custom-gpu { color: #81a1c1; }
 #disk { color: #bf616a; }
-#temperature { color: #8fbcbb; }
+#temperature {
+    font-family: "Symbols Nerd Font";
+    padding: 0 10px;
+    color: #8fbcbb;
+}
 #pulseaudio { color: #a3be8c; }
 #network { color: #b48ead; }
 #clock { color: #88c0d0; }

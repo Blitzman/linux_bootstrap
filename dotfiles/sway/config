@@ -42,8 +42,8 @@ client.urgent           #bf616a #bf616a #d8dee9 #bf616a   #bf616a
 client.placeholder      #2e3440 #2e3440 #d8dee9 #2e3440   #2e3440
 
 ### Autostart
-exec_always pkill mako; mako
-exec_always pkill waybar; waybar
+exec_always "pkill mako; mako"
+exec_always "sleep 1; pkill waybar; waybar"
 exec swayidle -w \
          timeout 300 'swaylock -f -c 2e3440' \
          timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \

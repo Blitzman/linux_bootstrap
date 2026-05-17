@@ -3,6 +3,7 @@
 This file documents the status of the Sway/Wayland environment enhancements.
 
 ## Completed Enhancements
+- **Version Control:** Git repository initialized and pushed to [GitHub](https://github.com/Blitzman/linux_bootstrap).
 - **Window Manager:** **SwayFX** 0.5.3 (built from source).
   - **Eye Candy:** Enabled rounded corners (10px), window shadows, inactive dimming, and Gaussian blur.
 - **Terminal:** `foot` is installed and configured as the default.
@@ -15,16 +16,18 @@ This file documents the status of the Sway/Wayland environment enhancements.
   - **Layout:** Floating center-top (4K optimized with 400px side margins and 20px top margin).
   - **Monitoring:** Integrated CPU (usage), Memory (used/total), GPU (NVIDIA load/VRAM), Disk (used/total), Temperature, Clock, and Tray.
   - **Style:** Semi-transparent Nord background with Frost blue accent borders.
+  - **Typography:** Uses **Nerd Fonts (Symbols Only)** for consistent icon rendering.
 - **Launcher:** **Wofi** (Super+D) themed with Nord colors.
 - **Notifications:** **Mako** styled with Nord background and Frost borders.
 - **System Controls:** 
   - `pactl` for audio.
   - `brightnessctl` for backlight.
   - `swayidle` and `swaylock` (Super+Ctrl+L) for session management.
+  - **Dotfiles Management:** Created `sync-dots.sh` to automatically symlink `dotfiles/` to `~/.config/`.
 - **Screenshots:** `grim` + `slurp` + `wl-clipboard` (Print or Super+Shift+S).
 
 ## Key Configuration Files (in `dotfiles/`)
-- **Sway:** `sway/config`
+- **Sway:** `sway/config` (Updated autostart with `sleep 1` delay for reliability)
 - **Waybar:** `waybar/config.jsonc`, `waybar/style.css`
 - **Foot:** `foot/foot.ini`
 - **Mako:** `mako/config`
@@ -42,4 +45,4 @@ This file documents the status of the Sway/Wayland environment enhancements.
 ## Pending/Optional Ideas
 - Add GTK theme configuration (e.g., Nordic) for consistent app visuals in browsers/pavucontrol.
 - Setup `swaynag` styling.
-- Create a unified script to sync `dotfiles/` to `~/.config/` automatically.
+

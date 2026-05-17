@@ -50,7 +50,7 @@
 
     "temperature": {
         "format": "{icon} {temperatureC}°C",
-        "format-icons": ["", "", ""],
+        "format-icons": ["", "", ""],
         "tooltip": false
     },
 
