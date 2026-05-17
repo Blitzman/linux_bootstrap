@@ -19,6 +19,9 @@ This file documents the status of the Sway/Wayland environment enhancements.
   - **Workspaces:** Animated dot indicators (icons) with "pop" transitions.
   - **Monitoring:** Integrated CPU, Memory, GPU (NVIDIA), Disk, Temperature, Clock, and Tray.
   - **Typography:** Uses **Nerd Fonts (Symbols Only)** for consistent icon rendering.
+- **GTK Theming:** **Nordic** GTK theme and **Papirus-Dark** icons applied.
+  - Consistent look for apps like Chrome, Pavucontrol, and File Managers.
+  - Configuration managed via `gsettings` and `settings.ini` (GTK 3/4).
 - **Launcher:** **Wofi** (Super+Space) themed with Nord "Glass" aesthetic.
   - **Dimensions:** Enlarged to 800x500 for better usability.
   - **Style:** 80% opacity, 10px radius, and Frost blue borders (matching terminal/bar).
@@ -47,6 +50,5 @@ This file documents the status of the Sway/Wayland environment enhancements.
 - `Print` or `Super+Shift+S`: Area screenshot to clipboard.
 
 ## Pending/Optional Ideas
-- Add GTK theme configuration (e.g., Nordic) for consistent app visuals in browsers/pavucontrol.
 - Setup `swaynag` styling.
 

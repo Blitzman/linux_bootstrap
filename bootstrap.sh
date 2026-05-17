@@ -16,6 +16,7 @@ sudo apt install -y \
     waybar \
     mako-notifier \
     fonts-font-awesome \
+    fonts-roboto \
     swayidle \
     swaylock \
     brightnessctl \
@@ -23,7 +24,29 @@ sudo apt install -y \
     grim \
     slurp \
     wl-clipboard \
-    pavucontrol
+    pavucontrol \
+    lxappearance \
+    qt5ct
+
+# Setup GTK Theme (Nordic)
+echo "Setting up Nordic GTK Theme..."
+mkdir -p ~/.themes ~/.icons
+if [ ! -d "$HOME/.themes/Nordic" ]; then
+    git clone https://github.com/EliverLara/Nordic.git ~/.themes/Nordic
+fi
+wget -qO- https://git.io/papirus-icon-theme-install | DESTDIR="$HOME/.icons" sh
+
+# Configure GTK Settings
+mkdir -p ~/.config/gtk-3.0 ~/.config/gtk-4.0
+cat <<EOF > ~/.config/gtk-3.0/settings.ini
+[Settings]
+gtk-theme-name=Nordic
+gtk-icon-theme-name=Papirus-Dark
+gtk-font-name=Roboto 11
+gtk-cursor-theme-name=DMZ-White
+gtk-application-prefer-dark-theme=1
+EOF
+cp ~/.config/gtk-3.0/settings.ini ~/.config/gtk-4.0/settings.ini
 
 # Install Build Dependencies (for SwayFX)
 echo "Installing Build Dependencies for SwayFX..."

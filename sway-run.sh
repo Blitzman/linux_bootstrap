@@ -7,5 +7,9 @@ export XDG_SESSION_TYPE=wayland
 export GBM_BACKEND=nvidia-drm
 export __GLX_VENDOR_LIBRARY_NAME=nvidia
 
+# GTK Theme
+export GTK_THEME=Nordic
+export XCURSOR_SIZE=24
+
 # Log the output to a file for easier debugging
 exec sway --unsupported-gpu -d > ~/sway.log 2>&1
