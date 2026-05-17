@@ -13,9 +13,11 @@ This file documents the status of the Sway/Wayland environment enhancements.
   - Window gaps enabled (inner: 10px, outer: 5px).
   - Wallpaper set to `~/Downloads/stripes.png`.
 - **Status Bar:** **Waybar** configured with a "Floating Pill" aesthetic.
-  - **Layout:** Floating center-top (4K optimized with 400px side margins and 20px top margin).
-  - **Monitoring:** Integrated CPU (usage), Memory (used/total), GPU (NVIDIA load/VRAM), Disk (used/total), Temperature, Clock, and Tray.
-  - **Style:** Semi-transparent Nord background with Frost blue accent borders.
+  - **Layout:** Floating center-top (4K optimized).
+  - **Aesthetics:** Glassmorphism effect (80% opacity), 10px corner radius (matching terminal), and 2px Frost blue border.
+  - **Padding:** 20px internal horizontal padding for a clean look.
+  - **Workspaces:** Animated dot indicators (icons) with "pop" transitions.
+  - **Monitoring:** Integrated CPU, Memory, GPU (NVIDIA), Disk, Temperature, Clock, and Tray.
   - **Typography:** Uses **Nerd Fonts (Symbols Only)** for consistent icon rendering.
 - **Launcher:** **Wofi** (Super+D) themed with Nord colors.
 - **Notifications:** **Mako** styled with Nord background and Frost borders.

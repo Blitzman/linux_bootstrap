@@ -33,6 +33,9 @@ blur enable
 blur_passes 3
 blur_radius 5
 
+# Layer effects for Waybar
+layer_effects "waybar" blur enable; shadows enable; corner_radius 10
+
 # Colors (Nord Palette)
 # class                 border  backgr. text    indicator child_border
 client.focused          #88c0d0 #88c0d0 #2e3440 #88c0d0   #88c0d0

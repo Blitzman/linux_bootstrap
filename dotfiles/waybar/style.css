@@ -1,54 +1,82 @@
 * {
-    font-family: "Symbols Nerd Font", "FontAwesome", "Roboto", "Helvetica", "Arial", sans-serif;
+    font-family: "Symbols Nerd Font", "Roboto", "Helvetica", "Arial", sans-serif;
     font-size: 20px;
+    border: none;
+    border-radius: 0;
 }
 
 window#waybar {
-    background-color: rgba(46, 52, 64, 0.9);
+    /* Identical to terminal background: #2e3440 (Nord 0) with 0.8 alpha */
+    background-color: rgba(46, 52, 64, 0.8);
     color: #d8dee9;
-    border-radius: 40px; 
-    border: 2px solid rgba(136, 192, 208, 0.4);
-    padding: 10px 20px;
+    border-radius: 10px;
+    /* Identical to terminal focused border: #88c0d0 (Frost blue) */
+    border: 2px solid #88c0d0;
+    margin: 15px 30px;
+    padding: 0 20px; /* Horizontal padding for modules */
+    transition: all 0.3s ease;
 }
 
 #workspaces {
-    background-color: rgba(59, 66, 82, 0.8);
-    border-radius: 25px;
-    margin: 5px 0;
+    background-color: rgba(46, 52, 64, 0.5);
+    margin: 8px 8px;
+    padding: 0 10px;
+    border-radius: 20px;
+    border: 1px solid rgba(136, 192, 208, 0.1);
 }
 
 #workspaces button {
-    color: #d8dee9;
-    padding: 5px 15px;
+    color: #4c566a;
+    padding: 0 12px;
+    transition: all 0.4s cubic-bezier(.55,-0.04,.3,1.44);
 }
 
 #workspaces button.focused {
     color: #88c0d0;
-    background-color: rgba(76, 86, 106, 0.8);
-    border-radius: 25px;
+    font-size: 28px; /* Makes the dot "pop" more */
+    background: transparent;
+}
+
+#workspaces button.urgent {
+    color: #bf616a;
+}
+
+#workspaces button:hover {
+    color: #d8dee9;
+    background: rgba(136, 192, 208, 0.1);
 }
 
 #cpu, #memory, #custom-gpu, #disk, #temperature, #pulseaudio, #network, #clock, #tray {
-    padding: 0 10px;
-    color: #d8dee9;
+    padding: 0 12px;
+    margin: 5px 2px;
+    border-radius: 10px;
+    background-color: rgba(59, 66, 82, 0.3);
 }
 
 #window {
     color: #88c0d0;
     font-weight: bold;
     padding: 0 20px;
+    background: rgba(136, 192, 208, 0.05);
+    border-radius: 10px;
 }
 
-/* Clear icon colors */
-#cpu { color: #d08770; }
-#memory { color: #ebcb8b; }
-#custom-gpu { color: #81a1c1; }
-#disk { color: #bf616a; }
+/* Specific colors with subtle glow */
+#cpu { color: #d08770; border-bottom: 2px solid rgba(208, 135, 112, 0.3); }
+#memory { color: #ebcb8b; border-bottom: 2px solid rgba(235, 203, 139, 0.3); }
+#custom-gpu { color: #81a1c1; border-bottom: 2px solid rgba(129, 161, 193, 0.3); }
+#disk { color: #bf616a; border-bottom: 2px solid rgba(191, 97, 106, 0.3); }
+
 #temperature {
     font-family: "Symbols Nerd Font";
-    padding: 0 10px;
     color: #8fbcbb;
+    border-bottom: 2px solid rgba(143, 188, 187, 0.3);
 }
+
 #pulseaudio { color: #a3be8c; }
 #network { color: #b48ead; }
-#clock { color: #88c0d0; }
+#clock { color: #88c0d0; font-weight: bold; }
+
+#tray {
+    padding-right: 15px;
+}
