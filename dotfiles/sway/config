@@ -16,6 +16,7 @@ include /etc/sway/config-vars.d/*
 output * bg /home/bergo/Downloads/stripes.png fill
 
 ### Appearance
+swaynag_command swaynag -c ~/.config/swaynag/config
 gaps inner 10
 gaps outer 5
 default_border pixel 2

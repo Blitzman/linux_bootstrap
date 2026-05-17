@@ -30,6 +30,7 @@ This file documents the status of the Sway/Wayland environment enhancements.
   - `pactl` for audio.
   - `brightnessctl` for backlight.
   - `swayidle` and `swaylock` (Super+Ctrl+L) for session management.
+  - **Swaynag:** Themed prompts (exit/warnings) with Nord colors and Nerd Fonts.
   - **Dotfiles Management:** Created `sync-dots.sh` to automatically symlink `dotfiles/` to `~/.config/`.
 - **Screenshots:** `grim` + `slurp` + `wl-clipboard` (Print or Super+Shift+S).
 
@@ -39,6 +40,7 @@ This file documents the status of the Sway/Wayland environment enhancements.
 - **Foot:** `foot/foot.ini`
 - **Mako:** `mako/config`
 - **Wofi:** `wofi/config`, `wofi/style.css` (Updated to "Glass" style)
+- **Swaynag:** `swaynag/config` (Nord theme)
 
 ## Important Bindings
 - `Super+Return`: Open `foot` terminal.
@@ -50,5 +52,6 @@ This file documents the status of the Sway/Wayland environment enhancements.
 - `Print` or `Super+Shift+S`: Area screenshot to clipboard.
 
 ## Pending/Optional Ideas
-- Setup `swaynag` styling.
+- Wallpaper automation or rotation script.
+- Setup a unified "Quick Menu" or system tray utility for easier control.
 

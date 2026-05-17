@@ -1,0 +1,17 @@
+[warning]
+background=2e3440
+text=d8dee9
+button-background=4c566a
+button-text=d8dee9
+border=88c0d0
+border-bottom=88c0d0
+font=Symbols Nerd Font 12
+
+[error]
+background=3b4252
+text=d8dee9
+button-background=bf616a
+button-text=2e3440
+border=bf616a
+border-bottom=bf616a
+font=Symbols Nerd Font 12
