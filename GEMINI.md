@@ -19,18 +19,18 @@ This file documents the status of the Sway/Wayland environment enhancements.
   - **Workspaces:** Animated dot indicators (icons) with "pop" transitions.
   - **Monitoring:** Integrated CPU, Memory, GPU (NVIDIA), Disk, Temperature, Clock, and Tray.
   - **Typography:** Uses **Nerd Fonts (Symbols Only)** for consistent icon rendering.
-- **GTK Theming:** **Nordic** GTK theme and **Papirus-Dark** icons applied.
-  - Consistent look for apps like Chrome, Pavucontrol, and File Managers.
-  - Configuration managed via `gsettings` and `settings.ini` (GTK 3/4).
 - **Launcher:** **Wofi** (Super+Space) themed with Nord "Glass" aesthetic.
   - **Dimensions:** Enlarged to 800x500 for better usability.
   - **Style:** 80% opacity, 10px radius, and Frost blue borders (matching terminal/bar).
+- **GTK Theming:** **Nordic** GTK theme and **Papirus-Dark** icons applied.
+  - Consistent look for apps like Chrome, Pavucontrol, and File Managers.
+  - Configuration managed via `gsettings` and `settings.ini` (GTK 3/4).
 - **Notifications:** **Mako** styled with Nord background and Frost borders.
 - **System Controls:** 
   - `pactl` for audio.
   - `brightnessctl` for backlight.
   - `swayidle` and `swaylock` (Super+Ctrl+L) for session management.
-  - **Swaynag:** Themed prompts (exit/warnings) with Nord colors and Nerd Fonts.
+  - **Swaynag:** Themed floating prompts (exit/warnings) with Nord colors, Nerd Fonts, and matching 10px radius.
   - **Dotfiles Management:** Created `sync-dots.sh` to automatically symlink `dotfiles/` to `~/.config/`.
 - **Screenshots:** `grim` + `slurp` + `wl-clipboard` (Print or Super+Shift+S).
 
@@ -54,4 +54,6 @@ This file documents the status of the Sway/Wayland environment enhancements.
 ## Pending/Optional Ideas
 - Wallpaper automation or rotation script.
 - Setup a unified "Quick Menu" or system tray utility for easier control.
+- Add Plymouth theme for a Nord-inspired boot screen.
+
 
