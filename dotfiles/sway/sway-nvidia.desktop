@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Sway (Nvidia)
+Comment=An i3-compatible Wayland compositor with Nvidia support
+Exec=/home/bergo/Workspace/linux_bootstrap/sway-run.sh
+Type=Application
+DesktopNames=sway;wlroots;swayfx

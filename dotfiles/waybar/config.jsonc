@@ -1,0 +1,77 @@
+{
+    "layer": "top",
+    "position": "top",
+    "margin-top": 20,
+    "margin-left": 400,
+    "margin-right": 400,
+    "spacing": 15,
+    "modules-left": ["sway/workspaces", "sway/mode"],
+    "modules-center": ["sway/window"],
+    "modules-right": [
+        "pulseaudio",
+        "network",
+        "cpu",
+        "memory",
+        "custom/gpu",
+        "disk",
+        "temperature",
+        "clock",
+        "tray"
+    ],
+    
+    "sway/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "format": "{name}"
+    },
+    
+    "cpu": {
+        "format": " {usage}%",
+        "tooltip": false
+    },
+    
+    "memory": {
+        "format": " {used:0.1f}G",
+        "tooltip": false
+    },
+
+    "custom/gpu": {
+        "exec": "nvidia-smi --query-gpu=utilization.gpu,memory.used --format=csv,noheader,nounits | awk -F', ' '{print $1\"% [\"$2\"MiB]\"}'",
+        "format": " {}",
+        "interval": 5,
+        "tooltip": false
+    },
+
+    "disk": {
+        "format": " {used}",
+        "path": "/",
+        "tooltip": false
+    },
+
+    "temperature": {
+        "format": "{icon} {temperatureC}°C",
+        "format-icons": ["", "", ""],
+        "tooltip": false
+    },
+
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-icons": { "default": ["", "", ""] },
+        "tooltip": false
+    },
+
+    "network": {
+        "format": " {essid}",
+        "max-length": 20,
+        "tooltip": false
+    },
+
+    "clock": {
+        "format": " {:%H:%M}",
+        "tooltip": false
+    },
+    
+    "tray": {
+        "spacing": 10
+    }
+}
