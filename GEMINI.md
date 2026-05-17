@@ -19,7 +19,9 @@ This file documents the status of the Sway/Wayland environment enhancements.
   - **Workspaces:** Animated dot indicators (icons) with "pop" transitions.
   - **Monitoring:** Integrated CPU, Memory, GPU (NVIDIA), Disk, Temperature, Clock, and Tray.
   - **Typography:** Uses **Nerd Fonts (Symbols Only)** for consistent icon rendering.
-- **Launcher:** **Wofi** (Super+D) themed with Nord colors.
+- **Launcher:** **Wofi** (Super+Space) themed with Nord "Glass" aesthetic.
+  - **Dimensions:** Enlarged to 800x500 for better usability.
+  - **Style:** 80% opacity, 10px radius, and Frost blue borders (matching terminal/bar).
 - **Notifications:** **Mako** styled with Nord background and Frost borders.
 - **System Controls:** 
   - `pactl` for audio.
@@ -33,12 +35,12 @@ This file documents the status of the Sway/Wayland environment enhancements.
 - **Waybar:** `waybar/config.jsonc`, `waybar/style.css`
 - **Foot:** `foot/foot.ini`
 - **Mako:** `mako/config`
-- **Wofi:** `wofi/config`, `wofi/style.css`
+- **Wofi:** `wofi/config`, `wofi/style.css` (Updated to "Glass" style)
 
 ## Important Bindings
 - `Super+Return`: Open `foot` terminal.
 - `Super+C`: Open Google Chrome.
-- `Super+D`: Open `wofi` launcher.
+- `Super+Space`: Open `wofi` launcher.
 - `Super+Ctrl+L`: Lock screen (swaylock).
 - `Super+Shift+Q`: Kill focused window.
 - `Super+Shift+C`: Reload Sway config.

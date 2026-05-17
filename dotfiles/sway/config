@@ -57,7 +57,7 @@ exec swayidle -w \
 bindsym $mod+Return exec $term
 bindsym $mod+c exec google-chrome
 bindsym $mod+Shift+q kill
-bindsym $mod+d exec $menu
+bindsym $mod+space exec $menu
 bindsym $mod+Control+l exec swaylock -f -c 2e3440
 floating_modifier $mod normal
 bindsym $mod+Shift+c reload
