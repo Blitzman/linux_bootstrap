@@ -35,6 +35,11 @@ This file documents the status of the Sway/Wayland environment enhancements.
   - **Swaynag:** Themed floating prompts (exit/warnings) with Nord colors, Nerd Fonts, and matching 10px radius.
   - **Dotfiles Management:** Created `sync-dots.sh` to automatically symlink `dotfiles/` to `~/.config/`.
 - **Screenshots:** `grim` + `slurp` + `wl-clipboard` (Print or Super+Shift+S).
+- **Shell & Command Line:** **Starship** prompt and modern command-line utilities.
+  - **Prompt:** Starship configured with custom Nord palette, dynamic directory, and Git branch/status tracking.
+  - **CLI Enhancements:** `eza` (colored file listings with icons) replaces `ls`; `bat` (syntax-highlighted pager) replaces `cat`; `fzf` (fuzzy finder) integrated for command history (`Ctrl+R`) and file completions.
+  - **Integration:** Automatically configured in `~/.bashrc` via `bootstrap.sh`.
+
 
 ## Key Configuration Files (in `dotfiles/`)
 - **Sway:** `sway/config` (Updated autostart with `sleep 1` delay for reliability)
@@ -43,6 +48,7 @@ This file documents the status of the Sway/Wayland environment enhancements.
 - **Mako:** `mako/config`
 - **Wofi:** `wofi/config`, `wofi/style.css` (Updated to "Glass" style)
 - **Swaynag:** `swaynag/config` (Nord theme)
+- **Starship:** `starship/starship.toml`
 
 ## Important Bindings
 - `Super+Return`: Open `foot` terminal.
