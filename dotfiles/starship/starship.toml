@@ -1,0 +1,61 @@
+# Nord-inspired Starship configuration
+
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """
+$directory\
+$git_branch\
+$git_status\
+$character
+"""
+
+add_newline = false
+
+[palettes.nord]
+nord0 = "#2E3440"  # Polar Night (darkest)
+nord1 = "#3B4252"  # Polar Night (dark)
+nord2 = "#434C5E"  # Polar Night (medium)
+nord3 = "#4C566A"  # Polar Night (light)
+nord4 = "#D8DEE9"  # Snow Storm (dark)
+nord5 = "#E5E9F0"  # Snow Storm (medium)
+nord6 = "#ECEFF4"  # Snow Storm (lightest)
+nord7 = "#8FBCBB"  # Frost (teal)
+nord8 = "#88C0D0"  # Frost (light blue)
+nord9 = "#81A1C1"  # Frost (medium blue)
+nord10 = "#5E81AC" # Frost (dark blue)
+nord11 = "#BF616A" # Aurora (red)
+nord12 = "#D08770" # Aurora (orange)
+nord13 = "#EBCB8B" # Aurora (yellow)
+nord14 = "#A3BE8C" # Aurora (green)
+nord15 = "#B48EAD" # Aurora (magenta)
+
+palette = "nord"
+
+[character]
+success_symbol = "[➜](bold nord8) "
+error_symbol = "[➜](bold nord11) "
+
+[directory]
+style = "bold nord7"
+truncation_length = 3
+truncation_symbol = "…/"
+read_only = " 󰌾"
+
+[git_branch]
+symbol = " "
+style = "bold nord15"
+format = "on [$symbol$branch]($style) "
+
+[git_status]
+style = "bold nord11"
+format = "[($all_status$ahead_behind)]($style) "
+conflicted = "="
+ahead = "⇡"
+behind = "⇣"
+diverged = "⇕"
+untracked = "?"
+stashed = "$"
+modified = "!"
+added = "+"
+renamed = "»"
+deleted = "✘"

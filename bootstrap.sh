@@ -27,7 +27,12 @@ sudo apt install -y \
     pavucontrol \
     lxappearance \
     qt5ct \
-    lxqt-policykit
+    lxqt-policykit \
+    starship \
+    eza \
+    bat \
+    fzf
+
 
 # Setup GTK Theme (Nordic)
 echo "Setting up Nordic GTK Theme..."
@@ -59,6 +64,42 @@ gsettings set org.gnome.desktop.interface cursor-theme 'DMZ-White'
 echo "Installing Snap theme packages..."
 sudo snap install icon-theme-papirus
 sudo snap install gtk-theme-nordic --edge
+
+# Configure ~/.bashrc for Starship, eza, bat, and fzf
+if ! grep -q "starship init bash" ~/.bashrc; then
+    echo "Configuring ~/.bashrc with modern shell tools..."
+    cat << 'EOF' >> ~/.bashrc
+
+# --- Sway Enhancement Shell Additions ---
+
+# Starship Prompt
+export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
+if command -v starship &> /dev/null; then
+    eval "$(starship init bash)"
+fi
+
+# Modern CLI tool aliases
+if command -v eza &> /dev/null; then
+    alias ls='eza --icons --group-directories-first'
+    alias ll='eza -lh --icons --group-directories-first'
+    alias la='eza -a --icons --group-directories-first'
+    alias lla='eza -lah --icons --group-directories-first'
+fi
+
+if command -v batcat &> /dev/null; then
+    alias cat='batcat'
+fi
+
+# Fzf fuzzy completion and key bindings
+if [ -f /usr/share/doc/fzf/examples/key-bindings.bash ]; then
+    source /usr/share/doc/fzf/examples/key-bindings.bash
+fi
+if [ -f /usr/share/doc/fzf/examples/completion.bash ]; then
+    source /usr/share/doc/fzf/examples/completion.bash
+fi
+# ----------------------------------------
+EOF
+fi
 
 
 # Install Build Dependencies (for SwayFX)
