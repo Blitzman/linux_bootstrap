@@ -26,7 +26,8 @@ sudo apt install -y \
     wl-clipboard \
     pavucontrol \
     lxappearance \
-    qt5ct
+    qt5ct \
+    lxqt-policykit
 
 # Setup GTK Theme (Nordic)
 echo "Setting up Nordic GTK Theme..."
@@ -47,6 +48,18 @@ gtk-cursor-theme-name=DMZ-White
 gtk-application-prefer-dark-theme=1
 EOF
 cp ~/.config/gtk-3.0/settings.ini ~/.config/gtk-4.0/settings.ini
+
+# Configure GSettings for desktop environment interface
+echo "Configuring GSettings..."
+gsettings set org.gnome.desktop.interface gtk-theme 'Nordic'
+gsettings set org.gnome.desktop.interface icon-theme 'Papirus-Dark'
+gsettings set org.gnome.desktop.interface cursor-theme 'DMZ-White'
+
+# Install Snap theme packages for sandboxed apps
+echo "Installing Snap theme packages..."
+sudo snap install icon-theme-papirus
+sudo snap install gtk-theme-nordic --edge
+
 
 # Install Build Dependencies (for SwayFX)
 echo "Installing Build Dependencies for SwayFX..."

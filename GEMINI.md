@@ -25,11 +25,13 @@ This file documents the status of the Sway/Wayland environment enhancements.
 - **GTK Theming:** **Nordic** GTK theme and **Papirus-Dark** icons applied.
   - Consistent look for apps like Chrome, Pavucontrol, and File Managers.
   - Configuration managed via `gsettings` and `settings.ini` (GTK 3/4).
+  - Integrates corresponding Snap theme packages (`gtk-theme-nordic` and `icon-theme-papirus`) so sandboxed applications match system theming.
 - **Notifications:** **Mako** styled with Nord background and Frost borders.
 - **System Controls:** 
   - `pactl` for audio.
   - `brightnessctl` for backlight.
   - `swayidle` and `swaylock` (Super+Ctrl+L) for session management.
+  - **PolicyKit:** Configured `lxqt-policykit-agent` to autostart, providing secure, native graphical password prompts for administrative tasks.
   - **Swaynag:** Themed floating prompts (exit/warnings) with Nord colors, Nerd Fonts, and matching 10px radius.
   - **Dotfiles Management:** Created `sync-dots.sh` to automatically symlink `dotfiles/` to `~/.config/`.
 - **Screenshots:** `grim` + `slurp` + `wl-clipboard` (Print or Super+Shift+S).
