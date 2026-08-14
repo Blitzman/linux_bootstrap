@@ -1,13 +1,24 @@
-# Nord-inspired Starship configuration
+# Nord-inspired Starship configuration with Pill-segmented layout
 
 "$schema" = 'https://starship.rs/config-schema.json'
 
 format = """
+[░▒▓](nord7)\
+[  ](bg:nord7 fg:nord0)\
+[](bg:nord8 fg:nord7)\
 $directory\
+[](fg:nord8 bg:nord3)\
 $git_branch\
 $git_status\
-$character
-"""
+[](fg:nord3 bg:nord2)\
+$nodejs\
+$rust\
+$golang\
+$python\
+[](fg:nord2 bg:nord1)\
+$time\
+[ ](fg:nord1)\
+\n$character"""
 
 add_newline = false
 
@@ -31,31 +42,63 @@ nord15 = "#B48EAD" # Aurora (magenta)
 
 palette = "nord"
 
+[directory]
+style = "fg:nord0 bg:nord8"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+
+[git_branch]
+symbol = ""
+style = "bg:nord3"
+format = '[[ $symbol $branch ](fg:nord6 bg:nord3)]($style)'
+
+[git_status]
+style = "bg:nord3"
+format = '[[($all_status$ahead_behind )](fg:nord5 bg:nord3)]($style)'
+conflicted = "[=](bold nord11)"
+ahead = "[⇡](bold nord14)"
+behind = "[⇣](bold nord11)"
+diverged = "[⇕](bold nord13)"
+untracked = "[?](bold nord12)"
+stashed = "[\\$](bold nord15)"
+modified = "[!](bold nord13)"
+staged = "[+](bold nord14)"
+renamed = "[»](bold nord10)"
+deleted = "[✘](bold nord11)"
+
+[nodejs]
+symbol = ""
+style = "bg:nord2"
+format = '[[ $symbol ($version) ](fg:nord7 bg:nord2)]($style)'
+
+[rust]
+symbol = ""
+style = "bg:nord2"
+format = '[[ $symbol ($version) ](fg:nord7 bg:nord2)]($style)'
+
+[golang]
+symbol = ""
+style = "bg:nord2"
+format = '[[ $symbol ($version) ](fg:nord7 bg:nord2)]($style)'
+
+[python]
+symbol = ""
+style = "bg:nord2"
+format = '[[ $symbol ($version) ](fg:nord7 bg:nord2)]($style)'
+
+[time]
+disabled = false
+time_format = "%R"
+style = "bg:nord1"
+format = '[[  $time ](fg:nord5 bg:nord1)]($style)'
+
 [character]
 success_symbol = "[➜](bold nord8) "
 error_symbol = "[➜](bold nord11) "
-
-[directory]
-style = "bold nord7"
-truncation_length = 3
-truncation_symbol = "…/"
-read_only = " 󰌾"
-
-[git_branch]
-symbol = " "
-style = "bold nord15"
-format = "on [$symbol$branch]($style) "
-
-[git_status]
-style = "bold nord11"
-format = "[($all_status$ahead_behind)]($style) "
-conflicted = "="
-ahead = "⇡"
-behind = "⇣"
-diverged = "⇕"
-untracked = "?"
-stashed = '\$'
-modified = "!"
-staged = "+"
-renamed = "»"
-deleted = "✘"
