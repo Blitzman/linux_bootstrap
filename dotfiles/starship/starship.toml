@@ -21,6 +21,7 @@ $time\
 \n$character"""
 
 add_newline = false
+palette = "nord"
 
 [palettes.nord]
 nord0 = "#2E3440"  # Polar Night (darkest)
@@ -40,7 +41,6 @@ nord13 = "#EBCB8B" # Aurora (yellow)
 nord14 = "#A3BE8C" # Aurora (green)
 nord15 = "#B48EAD" # Aurora (magenta)
 
-palette = "nord"
 
 [directory]
 style = "fg:nord0 bg:nord8"
